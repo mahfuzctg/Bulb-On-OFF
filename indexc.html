@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Dom Event</title>
+  </head>
+  <body>
+   
+    <h1 onclick="console.log('welcome!')">welcome to ja dom events</h1>
+    <button onclick="console.log(10)">click me</button>
+    <button onclick="console.log('I clicked')">click here</button>
+    <button onclick="btnRed()">click here to red</button>
+    <button onclick="btnBlue()">click here to blue</button>
+    <button id="btn-green" onclick="btnGreen()">click here to green</button>
+    <button id="btn-purple">click here to green</button>
+    <button id="btn-pink">click here to pink</button>
+    <button id="btn-goldenrod">click here to goldenrod</button>
+
+    <script src="/js/events.js"></script>
+
+    <script>
+      function btnRed() {
+        document.body.style.backgroundColor = "red";
+      }
+
+     
+    </script>
+  </body>
+</html>

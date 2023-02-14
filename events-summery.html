@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js dom event summery </title>
+</head>
+<body>
+    
+    <h1>Final dom event handlers</h1>
+    <h2 id="header-status">default text</h2>
+    <p id="p-main">Defailt input tag</p>
+    <input id="input-filed" type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+     <button onclick="handler()">Handle event by add onclick</button>
+     <button id="event-listener">Handle event by add addEventListener</button>
+ 
+    <script>
+        function handler(){
+            const onClickHandLer = document.getElementById('header-status');
+            onClickHandLer.innerText = 'Handled by function attached on onclick attribute';
+            onClickHandLer.style.color ='red';
+        }
+        document.getElementById('event-listener').addEventListener('click', function(){
+            const onClickHandLer = document.getElementById('header-status');
+            onClickHandLer.innerText = 'This is a another one';
+            onClickHandLer.style.color ='blue'
+        })
+    </script>
+    <!-- number 2 again -->
+    <script>
+        // document.getElementById('btn-update').addEventListener('click', function(){
+        //     const inputFiled = document.getElementById('input-filed');
+        //     const inputTexts = inputFiled.value;
+
+        //     const p = document.getElementById('p-main');
+        //     p.innerText = inputTexts ;
+        //     inputFiled.value = ''
+        // })
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputFiled = document.getElementById('input-filed');
+            const inputTexts = inputFiled.value;
+
+            const p = document.getElementById('p-main');
+            p.innerText = inputTexts;
+            inputFiled.value = ''
+        })
+    </script>
+</body>
+</html>

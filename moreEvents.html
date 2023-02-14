@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body>
+    <h1>This is a more events heading</h1>
+    <button id="delete-btn">delete</button>
+    <input id="input-filed" type="text">
+
+
+    <script> 
+        document.getElementById('delete-btn').addEventListener('mousemove', function(){
+            console.log('here is events');
+        })  
+        document.getElementById('input-filed').addEventListener('focus', function(){
+            console.log('here is iput ')
+        })
+        document.getElementById('input-filed').addEventListener('blur', function(){
+            console.log('here is blur input')
+        })
+        document.getElementById('input-filed').addEventListener('keyup', function(event){
+            console.log(event.target.value)
+        })
+    </script>
+</body>
+</html>
